@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link to your CSS stylesheet -->
+    <title>Survey Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="title">Survey Form</h1>
+        <p id="description">
+            Please fill out this survey to help us improve our service.
+        </p>
+
+        <form id="survey-form">
+            <!-- Name Input -->
+            <div class="form-group">
+                <label id="name-label" for="name">Name</label><br>
+                <input id="name" type="text" name="name" placeholder="Enter your name" required />
+            </div>
+
+            <!-- Email Input -->
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label><br>
+                <input id="email" type="email" name="email" placeholder="Enter your email" required />
+            </div>
+
+            <!-- Number Input -->
+            <div class="form-group">
+                <label id="number-label" for="number">Age</label><br>
+                <input id="number" type="number" name="age" placeholder="Enter your age" min="0" max="120" required />
+            </div>
+
+            <!-- Dropdown Select -->
+            <div class="form-group">
+                <label for="dropdown">How did you hear about us?</label><br>
+                <select id="dropdown" name="referral">
+                    <option value="friend">Friend</option>
+                    <option value="social_media">Social Media</option>
+                    <option value="advertisement">Advertisement</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <!-- Radio Buttons -->
+            <div class="form-group">
+                <fieldset>
+                    <legend>Gender</legend>
+                    <label>
+                        <input type="radio" name="gender" value="male" required /> Male
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female" required />
+                        Female
+                    </label>
+                </fieldset>
+            </div>
+
+            <!-- Checkboxes -->
+            <div class="form-group">
+                <fieldset>
+                    <legend>Preferred Contact Methods</legend>
+                    <label>
+                        <input type="checkbox" name="contact" value="email" /> Email
+                    </label>
+                    <label>
+                        <input type="checkbox" name="contact" value="phone" /> Phone
+                    </label>
+                </fieldset>
+            </div>
+
+            <!-- Textarea -->
+            <div class="form-group">
+                <label for="comments">Additional Comments</label><br>
+                <textarea id="comments" name="comments" rows="4" placeholder="Enter your comments here"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button id="submit" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

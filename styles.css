@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+body {
+    font-size: 16px;
+    color: #466543;
+    background-color: #d5e6d491;
+}
+
+.container {
+    margin: auto;
+    max-width: 40em;
+    min-height: 100vh;
+    background-color: #D5E6D4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5em 0;
+    user-select: none;
+}
+
+#title {
+    font-size: 1.75em;
+    margin-bottom: 0.625em;
+}
+
+#description {
+    font-size: 0.8125em;
+    margin-bottom: 1.875em;
+    text-align: center;
+}
+
+.form-group {
+    margin-top: 1.25em;
+}
+
+#name, #email, #number, #dropdown, #comments, #submit {
+    width: 18.125em;
+    height: 2.1875em;
+    background-color: transparent;
+    border: solid 1px #466543;
+    border-radius: 0.375em;
+    padding-left: 0.625em;
+    outline: none;
+    color: #466543;
+}
+
+#dropdown option {
+    background-color: #466543;
+    color: #fff;
+    border-radius: 0.375em;
+}
+
+#dropdown:hover {
+    background-color: #B9D1B7;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid #466543;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="radio"] {
+    border-radius: 50%;
+}
+
+input[type="radio"]:checked {
+    background-color: #466543;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #466543;
+}
+
+fieldset {
+    border: none;
+}
+
+fieldset label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.3125em;
+}
+
+#comments {
+    max-width: 18.125em;
+    height: 4.375em;
+    padding: 0.625em;
+}
+
+#submit {
+    background-color: #466543;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submit:hover {
+    background-color: #3a5535;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #3a5535;
+    box-shadow: 0 0 5px rgba(58, 85, 53, 0.5);
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 1em;
+    }
+
+    #name, #email, #number, #dropdown, #comments, #submit {
+        width: 100%;
+    }
+}
